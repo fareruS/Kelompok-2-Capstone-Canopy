@@ -42,9 +42,9 @@ public class DataStore {
         blokList.add(new BlokLahan("KR001", "Blok Karet B01", 8.0, "Karet", "2015"));
         blokList.add(new BlokLahan("KR002", "Blok Karet B02", 15.0, "Karet", "2016"));
 
-        pegawaiList.add(new Pegawai("U001", "Ahmad Fauzi", "ahmad.admin", "admin123", "081234560001", "Admin"));
-        pegawaiList.add(new Pegawai("U003", "Budi Santoso", "budi.direksi", "direksi123", "081234560003", "Direksi"));
-        pegawaiList.add(new Pegawai("U006", "Andi Saputra", "andi.petugas", "petugas123", "081234560006", "Petugas"));
+        pegawaiList.add(new Pegawai("U001", "Ahmad Fauzi", "ahmad.admin", "admin123", "081234560001", "Admin", "Operasional & SDM"));
+        pegawaiList.add(new Pegawai("U003", "Budi Santoso", "budi.direksi", "direksi123", "081234560003", "Direksi", "Direktur Utama"));
+        pegawaiList.add(new Pegawai("U006", "Andi Saputra", "andi.petugas", "petugas123", "081234560006", "Petugas", "Afdeling I (Sawit)"));
 
         addPanenInternal(new Panen("PN001", "2026-10-25", "SW001 - Blok Sawit A01", "Sawit", 100, 250, 1250.0, 45.0, "Baik", "2018"));
         addPanenInternal(new Panen("PN002", "2026-10-26", "KR001 - Blok Karet B01", "Karet", 680, 28, 680.0, 20.0, "Cukup", "2015"));

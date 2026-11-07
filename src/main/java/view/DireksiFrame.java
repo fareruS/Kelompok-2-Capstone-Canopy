@@ -147,7 +147,8 @@ public class DireksiFrame extends javax.swing.JFrame {
                 p.getNamaPegawai(),
                 p.getUsername(),
                 p.getNoTelp(),
-                p.getRole()
+                p.getRole(),
+                p.getDetailRole() != null && !p.getDetailRole().trim().isEmpty() ? p.getDetailRole() : "-"
             });
         }
     }
@@ -385,11 +386,11 @@ public class DireksiFrame extends javax.swing.JFrame {
 
             },
             new String [] {
-                "ID Pegawai", "Nama Pegawai", "Username", "No. Telepon", "Role"
+                "ID Pegawai", "Nama Pegawai", "Username", "No. Telepon", "Role", "Penugasan / Jabatan"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false
+                false, false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {

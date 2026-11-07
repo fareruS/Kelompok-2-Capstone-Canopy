@@ -221,7 +221,8 @@ public class AdminFrame extends javax.swing.JFrame {
                 p.getNamaPegawai(),
                 p.getUsername(),
                 p.getNoTelp(),
-                p.getRole()
+                p.getRole(),
+                p.getDetailRole() != null && !p.getDetailRole().trim().isEmpty() ? p.getDetailRole() : "-"
             });
         }
     }
@@ -879,6 +880,7 @@ public class AdminFrame extends javax.swing.JFrame {
                     .addComponent(txtPasswordPgw)
                     .addComponent(txtNoTelp)
                     .addComponent(cmbRole, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txtDetailRole)
                     .addGroup(pnlFormPegawaiLayout.createSequentialGroup()
                         .addComponent(btnSimpanPgw, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -894,7 +896,8 @@ public class AdminFrame extends javax.swing.JFrame {
                             .addComponent(lblUsernamePgw)
                             .addComponent(lblPasswordPgw)
                             .addComponent(lblNoTelp)
-                            .addComponent(lblRole))
+                            .addComponent(lblRole)
+                            .addComponent(lblDetailRole))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -923,6 +926,10 @@ public class AdminFrame extends javax.swing.JFrame {
                 .addComponent(lblRole)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(cmbRole, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(lblDetailRole)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtDetailRole, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(24, 24, 24)
                 .addGroup(pnlFormPegawaiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnSimpanPgw, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -946,11 +953,11 @@ public class AdminFrame extends javax.swing.JFrame {
 
             },
             new String [] {
-                "ID Pegawai", "Nama Pegawai", "Username", "No. Telepon", "Role"
+                "ID Pegawai", "Nama Pegawai", "Username", "No. Telepon", "Role", "Penugasan / Jabatan"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false
+                false, false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
